@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>canvas绘制文字</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000" height="1000"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		//设置文字大小和字体
+		context.font = "30px Arial";
+
+		//绘制文字---填充
+		//参数:文字内容,文字起始坐标x,y,文字矩形框长度(可不写)
+		context.fillText("hello,world",100,50);
+
+		//绘制文字---边框
+		context.strokeText("hello,world",400,50);
+
+		context.font = "bold 40px Consolas";
+		context.fillText("hello,world",100,100);
+	</script>
+</body>
+</html>

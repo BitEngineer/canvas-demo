@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>translate图形平移</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		context.strokeStyle = "#cccccc";
+		context.rect(10,10,100,60);
+		context.stroke();
+
+		// 向右平移50
+		context.translate(50,0);
+		context.rect(10,10,100,60);
+		context.stroke();
+	</script>
+</body>
+</html>

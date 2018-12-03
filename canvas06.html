@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>scale对图形放大缩小</title>
+</head>
+<body>
+	<button id="biggerBtn" width="100px" height="20px"></button><br/>
+	<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+	
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		context.fillStyle = "#cccccc";
+		context.rect(10,10,100,60);
+		context.fill();
+
+		//说明:缩放语句一定要放在大小设置之前
+		//起始坐标也会跟着缩放
+		context.scale(2,2);
+		context.rect(10,10,100,60);
+		//只会以最后一次为准
+		context.fillStyle = "#cccccc";
+		context.fill();
+
+		context.scale(0.2,0.2);
+		context.rect(1000,10,100,60);
+		// 只会以最后一次为准
+		// context.fillStyle = "#000000";
+		context.fill();
+	</script>
+</body>
+</html>

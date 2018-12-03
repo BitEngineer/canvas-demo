@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>scale图形翻转</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		//scale还可以实现图形翻转---参数值为负时
+		var img = new Image();
+		img.src = "fox.png";
+		context.drawImage(img,10,10);
+
+		context.scale(1,-1);
+		// 注意:由于起始坐标也会乘以scale系数,所以起始坐标中要有负数
+		context.drawImage(img,200,-200);	
+	</script>
+</body>
+</html>

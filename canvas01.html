@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="1000" height="1000">
+			浏览器不支持canvas
+		</canvas>
+		<script type="text/javascript">
+			//画直线
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+			ctx.lineWidth = 10;
+			ctx.strokeStyle = "#cccccc";
+			
+			ctx.beginPath();
+			ctx.moveTo(10,10);
+			ctx.lineTo(150,150);
+			ctx.stroke();
+			
+			ctx.lineCap = "butt";
+			ctx.beginPath();
+			ctx.moveTo(200,20);
+			ctx.lineTo(300,20);
+			ctx.stroke();
+			
+			ctx.lineCap = "round";
+			ctx.beginPath();
+			ctx.moveTo(200,40);
+			ctx.lineTo(300,40);
+			ctx.stroke();
+			
+			ctx.lineCap = "square";
+			ctx.beginPath();
+			ctx.moveTo(200,60);
+			ctx.lineTo(300,60);
+			ctx.stroke();
+		</script>
+	</body>
+</html>

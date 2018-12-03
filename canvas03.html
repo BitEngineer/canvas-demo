@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000" height="1000">
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		context.lineWidth = 2;
+
+		context.strokeStyle = "#cccccc";
+		context.beginPath();
+		//参数含义:圆心横坐标,圆心纵坐标,半径,起始角度,终止角度,顺时针/逆时针
+		context.arc(100,100,60,0,270*Math.PI/180,false);
+		context.stroke();
+
+		context.fillStyle = "#cccccc";
+		context.beginPath();
+		context.arc(300,100,60,0,270*Math.PI/180,false);
+		context.fill();
+
+		//擦除画布canvas
+		// context.clearRect(0,0,1000,1000);
+	</script>
+</body>
+</html>

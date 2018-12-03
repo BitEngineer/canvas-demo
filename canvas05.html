@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+	<!--如果不设置编码,那么页面中的中文将会乱码-->
+	<meta charset="UTF-8"/>
+	<title>canvas绘制图片</title>
+</head>
+<body>
+	<h4>img标签图片</h4>
+	<img id="foxImg" src="fox.png"/>
+	<h4>canvas绘制图片</h4>
+	<canvas id="myCanvas" width="1000" height="1000"></canvas>
+	<script type="text/javascript">
+		var canvas =  document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		var foxImg = document.getElementById("foxImg");
+
+		// 这种方法,绘制不出---chrome不支持
+		// context.drawImage(foxImg,10,10);
+
+		//使用js的Image对象绘制图片
+		var image = new Image();
+		image.src = "fox.png";
+		
+		// 说明: 如果不使用图片的 onload 事件,那么图片不会被立即绘制
+		context.drawImage(image,10,100);
+
+		image.onload = function(){  // onload事件确保图片在加载完成之后，才会被绘制
+			context.drawImage(image,10,200);
+		};
+	</script>
+</body>
+</html>

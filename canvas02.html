@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="1000" height="1000">
+		</canvas>
+		<script type="text/javascript">
+			//画矩形
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+			
+			//矩形边框
+			context.linewidth = 5;
+			context.strokeStyle = "#cccccc";
+			context.beginPath();
+			context.strokeRect(10,10,70,40);
+
+			context.rect(100,10,70,40);
+			context.stroke();
+
+			//填充型矩形
+			context.fillStyle = "#cccccc"
+			context.beginPath ();
+			context.fillRect(200,10,70,40);
+
+			context.rect(300,10,70,40);
+			context.fill();
+			
+		</script>
+	</body>
+</html>
