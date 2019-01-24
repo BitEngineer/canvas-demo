@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>canvas-demo：渐变色和图案</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000px" height="1000px">浏览器不支持canvas</canvas>
+  </body>
+</html>
+<script>
+  'use strict'
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+
+  // 渐变色：线性渐变
+  var gradient = context.createLinearGradient(0,0,100,0);
+  gradient.addColorStop(0, '#333');
+  gradient.addColorStop(0.5, '#ccc');
+  gradient.addColorStop(1, '#eee');
+  context.fillStyle = gradient;
+  context.fillRect(0,0,100,100);
+
+  // 渐变色：放射渐变
+  var radialGradient = context.createRadialGradient(0,200,50,200,200,50);
+  radialGradient.addColorStop(0, '#333');
+  radialGradient.addColorStop(0.5, '#ccc');
+  radialGradient.addColorStop(1, '#eee');
+  context.fillStyle = radialGradient;
+  context.fillRect(0,150,100,100);
+</script>

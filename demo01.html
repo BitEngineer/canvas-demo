@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>canvas-demo</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000px" height="1000px">浏览器不支持canvas</canvas>
+  </body>
+</html>
+<script>
+  'use strict'
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+
+  // 绘制矩形
+  context.clearRect(0,0,100,100);
+  context.fillStyle = '#dddddd';
+  context.strokeStyle = '#000000';
+  // 填充矩形
+  context.fillRect(0,0,100,100);
+  // 线框矩形
+  context.strokeRect(0,110,100,100);
+
+  // 绘制文本
+  context.font = '20px sans-serif';
+  context.fillText('绘制文本', 0, 300);
+  context.strokeText('绘制文本', 0, 340);
+</script>

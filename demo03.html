@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>canvas-demo：阴影</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000px" height="1000px">浏览器不支持canvas</canvas>
+  </body>
+</html>
+<script>
+  'use strict'
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+
+  context.strokeStyle = '#000000';
+  // 阴影设置
+  context.shadowColor = 'rgba(0,0,0,0.7)';
+  context.shadowOffsetX = 3;
+  context.shadowOffsetY = 3;
+  context.shadowBlur = 2;
+
+  context.strokeRect(0,0,100,100);
+
+</script>

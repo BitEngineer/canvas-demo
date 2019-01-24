@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>canvas-demo：路径与路径绘制</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000px" height="1000px">浏览器不支持canvas</canvas>
+  </body>
+</html>
+<script>
+  'use strict'
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+
+  context.strokeStyle = '#000000';
+  // 圆弧路径
+  // 顺时针
+  context.beginPath();
+  context.arc(50,50,40,0,Math.PI*1/2);
+  context.stroke();
+  // 逆时针
+  context.beginPath();
+  context.arc(50,150,40,0,Math.PI*1/2,true);
+  context.stroke();
+
+
+</script>
