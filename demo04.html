@@ -12,7 +12,9 @@
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
 
+  // 描边样式
   context.strokeStyle = '#000000';
+
   // 圆弧路径
   // 顺时针
   context.beginPath();
@@ -23,5 +25,9 @@
   context.arc(50,150,40,0,Math.PI*1/2,true);
   context.stroke();
 
+  // 矩形路径
+  context.beginPath()
+  context.rect(50, 300, 80, 60)
+  context.stroke()
 
 </script>
